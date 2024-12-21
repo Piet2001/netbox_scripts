@@ -14,7 +14,7 @@ class clean_up(Script):
 
         # Update the site status
 
-        for site in Site.objects
+        for site in Site.objects.filter(status=SiteStatusChoices.STATUS_RETIRED)
           if (site.status == SiteStatusChoices.STATUS_RETIRED):
   
             for prefix in Prefix.objects.filter(site=data['site_name']):
