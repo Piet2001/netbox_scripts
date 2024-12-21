@@ -27,4 +27,5 @@ class disable_site(Script):
               prefix.status=PrefixStatusChoices.STATUS_DEPRECATED
               prefix.save()
               self.log_success(f"Updated Status of Prexix {prefix}")
+              self.log_success("finish")
   
