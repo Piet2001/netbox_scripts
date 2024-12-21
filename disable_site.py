@@ -26,5 +26,5 @@ class SiteStatusBulkUpdater(Script):
           for prefix in Prefix.objects.filter(site=data['site_name']):
               prefix.status=PrefixStatusChoices.STATUS_DEPRECATED
               prefix.save()
-              self.log_success(f"Updated Status of Prexix {prefix} to {data['location_status']}")
+              self.log_success(f"Updated Status of Prexix {prefix}")
   
