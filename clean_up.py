@@ -6,9 +6,9 @@ from ipam.models import Prefix
 from ipam.choices import PrefixStatusChoices
 
 
-class disable_site(Script):
+class clean_up(Script):
     class Meta:
-        name = "Disable site"
+        name = "Cleanup"
 
     def run(self, data, commit):
 
