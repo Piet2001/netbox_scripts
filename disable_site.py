@@ -6,7 +6,7 @@ from ipam.models import Prefix
 from ipam.choices import PrefixStatusChoices
 
 
-class DisableSite(Script):
+class disable_site(Script):
     class Meta:
         name = "Disable site"
 
