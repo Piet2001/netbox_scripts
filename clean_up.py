@@ -9,6 +9,7 @@ from ipam.choices import PrefixStatusChoices
 class clean_up(Script):
     class Meta:
         name = "Cleanup"
+        commit_default = True
 
     def run(self, data, commit):
         for site_loop in Site.objects.filter(status=SiteStatusChoices.STATUS_RETIRED):  
