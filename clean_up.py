@@ -12,7 +12,7 @@ class clean_up(Script):
 
     def run(self, data, commit):
         for site in Site.objects.filter(status=SiteStatusChoices.STATUS_RETIRED):  
-            for prefix in Prefix.objects.filter(site.name):
+            for prefix in Prefix.objects.filter(site):
                 if(prefix.status!=PrefixStatusChoices.STATUS_DEPRECATED):
                     prefix.status=PrefixStatusChoices.STATUS_DEPRECATED
                     prefix.save()
